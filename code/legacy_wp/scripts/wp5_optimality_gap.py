@@ -16,8 +16,8 @@ so this answers "given the state greedy got itself into, how much value did it l
 in this window?" -- not the harder joint question of scheduling every pass at once, which is
 stated as a limit rather than glossed over.
 
-    python scripts/wp5_optimality_gap.py
-    python scripts/wp5_optimality_gap.py --loads 40000 160000 --frac-steps 8
+    python legacy_wp/scripts/wp5_optimality_gap.py
+    python legacy_wp/scripts/wp5_optimality_gap.py --loads 40000 160000 --frac-steps 8
 
 Output: results/wp5_optimality_gap.csv|.png
 """

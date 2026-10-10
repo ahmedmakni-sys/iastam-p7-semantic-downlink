@@ -11,8 +11,8 @@ Options compared (every byte figure MEASURED, none assumed):
   thumbnails        every tile | gated: skipped where the classic pre-filter sees no
                     candidate AND the detector fired nothing (2% audit sample kept)
 
-    python scripts/wp7_budget_sweep.py
-    python scripts/wp7_budget_sweep.py --tiles 80000    # the congested regime
+    python legacy_wp/scripts/wp7_budget_sweep.py
+    python legacy_wp/scripts/wp7_budget_sweep.py --tiles 80000    # the congested regime
 
 Output: results/wp7_budget_sweep.csv|.png
 """

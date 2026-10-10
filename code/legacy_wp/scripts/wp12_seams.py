@@ -20,7 +20,7 @@ real detector, and the three policies can be compared on recall and compute for 
 Every slice is inferred at the model's native 768 px (what SAHI does in practice), so compute
 is proportional to the number of inferences -- the same accounting the Phase-2 guide used.
 
-    .venv312/Scripts/python.exe scripts/wp12_seams.py --tiles 300
+    .venv312/Scripts/python.exe legacy_wp/scripts/wp12_seams.py --tiles 300
 
 Outputs: results/wp12_seams.json, wp12_seams.csv, wp12_seams.png
 """

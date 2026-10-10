@@ -9,8 +9,8 @@ Compares (same synthetic day, same passes):
 
 Then sweeps the offered load to show where each strategy breaks.
 
-    python scripts/simulate_day.py
-    python scripts/simulate_day.py --tiles 80000 --link-share 0.1 --seed 2
+    python legacy_wp/scripts/simulate_day.py
+    python legacy_wp/scripts/simulate_day.py --tiles 80000 --link-share 0.1 --seed 2
 
 Outputs in results/: sim_table.csv, sim_recall.png, sim_latency.png, sim_load_sweep.png
 Everything here is a SIMULATION with a SYNTHETIC workload: say so on every slide.

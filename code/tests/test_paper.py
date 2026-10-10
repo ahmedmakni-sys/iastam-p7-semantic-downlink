@@ -57,7 +57,7 @@ def test_sahi_returns_global_boxes_and_dedups_overlap():
     img = np.zeros((1024, 1024, 3), np.uint8)
     ship = (600, 300, 20, 8)                           # lies in several overlapping slices
 
-    def det(crops, _calls=[]):
+    def det(crops):
         out = []
         for (x, y, w, h) in slice_grid(1024, 1024, 512, 0.2):
             gx, gy, gw, gh = ship

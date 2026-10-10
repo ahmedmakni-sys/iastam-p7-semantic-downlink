@@ -17,8 +17,8 @@ Outputs (results/):
   wp6_ships.csv       one row per GT ship    (tile, size_px, found, conf, context)
   wp6_catalogue.json  summary + the false-alarm rate as a function of threshold
 
-    python scripts/wp6_build_catalogue.py            # all 5,320 test tiles
-    python scripts/wp6_build_catalogue.py --n 200    # quick check
+    python legacy_wp/scripts/wp6_build_catalogue.py            # all 5,320 test tiles
+    python legacy_wp/scripts/wp6_build_catalogue.py --n 200    # quick check
 """
 from __future__ import annotations
 

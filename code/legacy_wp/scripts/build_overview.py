@@ -1,6 +1,6 @@
 """Self-contained project report: explains everything from zero, ready to present.
 
-    python scripts/build_overview.py   ->  ../report/IASTAM_P7_Project_Overview.pdf
+    python legacy_wp/scripts/build_overview.py   ->  ../paper/IASTAM_P7_Project_Overview.pdf
 """
 from __future__ import annotations
 

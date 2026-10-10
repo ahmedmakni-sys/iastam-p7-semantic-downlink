@@ -1,8 +1,8 @@
 """Evaluate the classic CV pre-filter: how many ships does it keep, how much does it drop?
 
-    python scripts/eval_prefilter.py --demo                      # synthetic tiles, no data needed
-    python scripts/eval_prefilter.py --airbus-dir D:/data/airbus --n 2000
-    python scripts/eval_prefilter.py --airbus-dir D:/data/airbus --split-csv data/yolo_ships/split.csv
+    python legacy_wp/scripts/eval_prefilter.py --demo                      # synthetic tiles, no data needed
+    python legacy_wp/scripts/eval_prefilter.py --airbus-dir D:/data/airbus --n 2000
+    python legacy_wp/scripts/eval_prefilter.py --airbus-dir D:/data/airbus --split-csv data/yolo_ships/split.csv
 
 Key numbers for the paper:
   * ship recall          -- ships covered by a candidate (the SAFETY metric: must stay high)

@@ -18,7 +18,7 @@ visible half is a success, not a failure.
 Combined with the geometry, this gives the expected ship loss per frame for each policy, which
 is what the SAHI decision actually needs.
 
-    .venv312/Scripts/python.exe scripts/wp12b_cut_recall.py --ships 400
+    .venv312/Scripts/python.exe legacy_wp/scripts/wp12b_cut_recall.py --ships 400
 
 Outputs: results/wp12b_cut_recall.json, wp12b_cut_recall.csv, wp12b_cut_recall.png
 """

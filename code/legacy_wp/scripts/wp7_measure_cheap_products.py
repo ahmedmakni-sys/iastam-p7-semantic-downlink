@@ -17,7 +17,7 @@ after downscaling, evaluated at the ship's own position from the ground-truth bo
 
 Output: results/wp7_cheap_products.csv|.json|.png
 
-    python scripts/wp7_measure_cheap_products.py --n 400
+    python legacy_wp/scripts/wp7_measure_cheap_products.py --n 400
 """
 from __future__ import annotations
 

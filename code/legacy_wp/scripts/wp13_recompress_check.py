@@ -14,7 +14,7 @@ Method: take the real coastal tiles, re-encode each at q60 / q40 / q30 / q20, de
 same detector, and match against the same ground truth with the WP1 rule. Reports recall by ship
 size at each quality, plus the byte cost, so the trade is visible rather than assumed.
 
-    .venv312/Scripts/python.exe scripts/wp13_recompress_check.py --tiles 400
+    .venv312/Scripts/python.exe legacy_wp/scripts/wp13_recompress_check.py --tiles 400
 
 Outputs: results/wp13_recompress.json, wp13_recompress.csv, wp13_recompress.png
 """

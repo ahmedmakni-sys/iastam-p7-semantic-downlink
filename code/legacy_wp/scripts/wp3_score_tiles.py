@@ -7,7 +7,7 @@ ship recall (WP3) and costs 51 ms/tile (WP11) -- the learned gate reaches 0.988 
 
 This writes one score per tile so both can be re-keyed on the better signal.
 
-    .venv312/Scripts/python.exe scripts/wp3_score_tiles.py --split test
+    .venv312/Scripts/python.exe legacy_wp/scripts/wp3_score_tiles.py --split test
 
 Outputs: results/wp3_gate_scores_<split>.csv  (image, gate_score)
 """

@@ -9,7 +9,7 @@ because cloud is the parameter WP10 ranked most influential (recall range 0.42).
 Sweeps the full grid rather than a cross, and reports where "ours >= fair fixed-patch baseline"
 actually breaks.
 
-    .venv/Scripts/python.exe scripts/wp10b_interaction.py
+    .venv/Scripts/python.exe legacy_wp/scripts/wp10b_interaction.py
 
 Outputs: results/wp10b_interaction.csv, wp10b_interaction.png
 """

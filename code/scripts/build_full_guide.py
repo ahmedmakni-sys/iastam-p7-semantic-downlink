@@ -276,7 +276,7 @@ def build():
              "vignettes.", "wp3_gate_scores_test.csv", "wp14_gate_signal.csv"]]),
         ("Phase 5 — Vérifier", [
             ["wp5_optimality_gap.py", "Compare value-greedy à l'optimum exact (programmation dynamique, "
-             "sat7/optimum) à chaque passage.", "catalogue", "wp5_optimality_gap.csv"],
+             "legacy_wp/wplib/optimum) à chaque passage.", "catalogue", "wp5_optimality_gap.csv"],
             ["wp5_joint_bound.py", "Borne la perte sur la journée entière, pas seulement par passage.",
              "catalogue", "wp5_joint_bound.csv"],
             ["wp10_sensitivity.py", "Fait varier chaque constante inventée et regarde si les conclusions "

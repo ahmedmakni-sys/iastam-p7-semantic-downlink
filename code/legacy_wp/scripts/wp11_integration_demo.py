@@ -15,7 +15,7 @@ schema from live inference and compares it, tile by tile, with the stored catalo
 two agree, WP6-WP10 are replaying something faithful. If they do not, every downstream number
 is suspect and this is where it shows up.
 
-    .venv312/Scripts/python.exe scripts/wp11_integration_demo.py --tiles 400
+    .venv312/Scripts/python.exe legacy_wp/scripts/wp11_integration_demo.py --tiles 400
 
 Outputs: results/wp11_integration.json, wp11_funnel.png, wp11_per_tile.csv
 """

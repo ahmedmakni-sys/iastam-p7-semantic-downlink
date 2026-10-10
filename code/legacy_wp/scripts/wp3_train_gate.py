@@ -6,7 +6,7 @@ Why: on real Airbus tiles the classic computer-vision filter is not usable as a 
 the expensive detector. This script trains one and measures it on the SAME axis, so the
 two can be compared honestly.
 
-    python scripts/wp3_train_gate.py --epochs 4 --size 128
+    python legacy_wp/scripts/wp3_train_gate.py --epochs 4 --size 128
 
 Outputs: results/wp3_gate.json, results/wp3_gate_tradeoff.png|csv, models/gate.pt
 """

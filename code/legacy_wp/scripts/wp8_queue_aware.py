@@ -13,8 +13,8 @@ tiles would only crowd out ship reports).
 This closes the loop between our two contributions: the encoder stops being a fixed policy
 and becomes part of the scheduler.
 
-    python scripts/wp8_queue_aware.py
-    python scripts/wp8_queue_aware.py --loads 40000 160000
+    python legacy_wp/scripts/wp8_queue_aware.py
+    python legacy_wp/scripts/wp8_queue_aware.py --loads 40000 160000
 
 Output: results/wp8_queue_aware.csv|.png, wp8_control_trace.png
 """

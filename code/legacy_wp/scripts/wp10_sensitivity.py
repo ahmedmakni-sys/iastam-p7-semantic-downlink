@@ -20,8 +20,8 @@ The second matters more. A number that shifts is fine; a claim that reverses is 
 claims checked are "value-greedy beats FIFO on our own payload" and "we beat a fair
 fixed-patch baseline", at a load where the link actually binds.
 
-    .venv/Scripts/python.exe scripts/wp10_sensitivity.py
-    .venv/Scripts/python.exe scripts/wp10_sensitivity.py --loads 160000
+    .venv/Scripts/python.exe legacy_wp/scripts/wp10_sensitivity.py
+    .venv/Scripts/python.exe legacy_wp/scripts/wp10_sensitivity.py --loads 160000
 
 Output: results/wp10_sensitivity.csv, wp10_tornado.png
 """

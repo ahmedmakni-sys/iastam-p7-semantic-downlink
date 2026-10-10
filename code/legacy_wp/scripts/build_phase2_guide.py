@@ -1,8 +1,8 @@
 """Build the Phase 2 & poster preparation guide (PDF).
 
-    python scripts/build_phase2_guide.py
+    python legacy_wp/scripts/build_phase2_guide.py
 
-Output: ../report/IASTAM_P7_Phase2_Poster_Guide.pdf
+Output: ../paper/IASTAM_P7_Phase2_Poster_Guide.pdf
 """
 from __future__ import annotations
 

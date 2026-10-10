@@ -11,7 +11,7 @@ own payload cost from its own measured length.
 
 Output: results/wp6_size_model.json  (a, b, R^2, residual sigma in log space)
 
-    python scripts/wp6_fit_size_model.py
+    python legacy_wp/scripts/wp6_fit_size_model.py
 """
 from __future__ import annotations
 

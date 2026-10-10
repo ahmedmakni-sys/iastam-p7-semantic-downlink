@@ -13,9 +13,9 @@ that can call more tiles empty -- safely -- is worth real bytes.
 The comparison is like-for-like: same catalogue, same day, same seed, same everything except the
 signal driving ``gate_empty``.
 
-    .venv/Scripts/python.exe scripts/wp14_gate_signal.py
+    .venv/Scripts/python.exe legacy_wp/scripts/wp14_gate_signal.py
 
-Needs `results/wp3_gate_scores_test.csv` (from scripts/wp3_score_tiles.py, which needs torch).
+Needs `results/wp3_gate_scores_test.csv` (from legacy_wp/scripts/wp3_score_tiles.py, which needs torch).
 Outputs: results/wp14_gate_signal.json, wp14_gate_signal.csv
 """
 from __future__ import annotations
@@ -55,7 +55,7 @@ def main() -> None:
     tiles, ships = load_catalogue(out)
     scores_path = out / "wp3_gate_scores_test.csv"
     if not scores_path.exists():
-        raise SystemExit(f"{scores_path.name} missing -- run scripts/wp3_score_tiles.py first")
+        raise SystemExit(f"{scores_path.name} missing -- run legacy_wp/scripts/wp3_score_tiles.py first")
     gs = pd.read_csv(scores_path)
     tiles_gate = tiles.merge(gs, on="image", how="left")
     tiles_gate.attrs = tiles.attrs                       # keep the false-alarm flags

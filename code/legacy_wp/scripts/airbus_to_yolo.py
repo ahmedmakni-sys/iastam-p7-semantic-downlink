@@ -4,7 +4,7 @@ Expected input (Kaggle "airbus-ship-detection"):
     <airbus-dir>/train_ship_segmentations_v2.csv
     <airbus-dir>/train_v2/*.jpg
 
-    python scripts/airbus_to_yolo.py --airbus-dir D:/data/airbus --out data/yolo_ships \
+    python legacy_wp/scripts/airbus_to_yolo.py --airbus-dir D:/data/airbus --out data/yolo_ships \
         --max-ship-images 8000 --empty-ratio 0.25
 
 Output (Ultralytics layout):

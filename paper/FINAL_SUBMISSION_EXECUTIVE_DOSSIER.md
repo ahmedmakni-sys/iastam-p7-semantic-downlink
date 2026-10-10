@@ -59,7 +59,7 @@ Every number below is strictly empirically verified from our dataset and automat
 | **Data Reduction vs Bent Pipe** | **557×** | 60,124 MB offered $\rightarrow$ 108.0 MB sent per day. |
 | **Delivery under Congestion** | **2.26× vs FIFO** | At 160k tiles/day load, FIFO drops high-value targets; our value-greedy scheduler delivers 2.26× more ships. |
 | **Onboard Knowledge Delivered** | **100.0%** | Under nominal orbital pass capacity, the downlink is *not* the bottleneck; 100% of detected targets are delivered. |
-| **Scheduler Optimality Gap** | **0.251%** | Measured against an exact Dynamic Programming knapsack solver (`sat7/optimum.py`), verified vs brute force. |
+| **Scheduler Optimality Gap** | **0.251%** | Measured against an exact Dynamic Programming knapsack solver (`legacy_wp/wplib/optimum.py`), verified vs brute force. |
 | **Pre-Filter Gate Speed & Safety** | **0.052 ms / 98.8%** | 47k-parameter CNN drops 40.2% of empty tiles while keeping 98.8% of ships (outperforms classic CV by +43.3 points). |
 | **Detector Precision & Recall** | **mAP50 0.804** | Recall by size: small (<32px) 0.739, medium 0.958, large 0.994 (at conf $\ge$ 0.05). |
 | **Edge Compute Selection** | **ONNX FP32** | Dynamic INT8 is 8.5× slower on CPU and loses 2.2 points on small ships. FP32 is lossless and 1.21× faster than PyTorch. |
@@ -119,7 +119,7 @@ When presenting to academic and industrial judges, use these data-backed defense
 * **Answer:** *"In our byte budget audit (Report 06), transmitting full tiles—even at quality 40—consumes 62% of the downlink budget. Compressing harder hurts small ship recall by 4.0 points. Our semantic approach delivers a **557-fold data reduction** because confident detections require only 40 bytes. We transmit actionable intelligence, not ocean water."*
 
 #### Q3: "Did you actually prove your scheduler is optimal?"
-* **Answer:** *"Yes. In Report 08, we formulated the multi-pass pass-allocation problem as a bounded knapsack problem and developed an exact Dynamic Programming solver (`sat7/optimum.py`), verified against brute force. Our value-greedy scheduler achieves an optimality gap of only **0.251%** at operational scale, while running in sub-millisecond execution time."*
+* **Answer:** *"Yes. In Report 08, we formulated the multi-pass pass-allocation problem as a bounded knapsack problem and developed an exact Dynamic Programming solver (`legacy_wp/wplib/optimum.py`), verified against brute force. Our value-greedy scheduler achieves an optimality gap of only **0.251%** at operational scale, while running in sub-millisecond execution time."*
 
 #### Q4: "How does your system perform when the satellite experiences traffic bursts?"
 * **Answer:** *"Under heavy congestion (160,000 tiles/day), traditional FIFO queues drop high-value detections blindly. Our value-aware queue scheduler achieves **2.26× higher vessel delivery** than FIFO. Furthermore, our queue-aware encoder (Report 07) senses buffer pressure and dynamically throttles coastal tiles to protect critical vessel telemetry."*
@@ -130,7 +130,7 @@ When presenting to academic and industrial judges, use these data-backed defense
 
 - [x] **Technical Codebase:** 15 Work Packages complete, 86 tests passing (`pytest tests`).
 - [x] **Reproducible Results:** 15 narrative markdown reports in `reports/` backed by authoritative CSVs in `code/results/`.
-- [x] **Technical Report (PDF):** `paper/IASTAM_P7_Technical_Report.pdf` (compiled via `python scripts/build_report.py`).
+- [x] **Technical Report (PDF):** `paper/IASTAM_P7_Technical_Report.pdf` (compiled via `python legacy_wp/scripts/build_report.py`).
 - [x] **Project Overview (PDF):** `paper/IASTAM_P7_Project_Overview.pdf`.
 - [x] **Poster Guide (PDF):** `paper/IASTAM_P7_Phase2_Poster_Guide.pdf`.
 - [x] **2-Minute Video Script:** `paper/VIDEO_SCRIPT_2MIN.md` (timed second-by-second with visuals).

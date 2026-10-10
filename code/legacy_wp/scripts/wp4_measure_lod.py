@@ -11,7 +11,7 @@ measures them on real ship crops from the leakage-free dataset:
 Later (once the detector exists) the same crops are re-run through the detector to get
 g(level) = probability that the ground can still confirm the ship.
 
-    python scripts/wp4_measure_lod.py --yolo-dir data/yolo_ships --n 400
+    python legacy_wp/scripts/wp4_measure_lod.py --yolo-dir data/yolo_ships --n 400
 Outputs: results/wp4_lod_sizes.csv, results/wp4_lod_sizes.png, printed summary table
 """
 from __future__ import annotations

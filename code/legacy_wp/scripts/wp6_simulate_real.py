@@ -1,6 +1,6 @@
 """WP6 step 3: the Contribution-A experiment, driven by REAL detections.
 
-Same five strategies and the same orbit as scripts/simulate_day.py, but the day is
+Same five strategies and the same orbit as legacy_wp/scripts/simulate_day.py, but the day is
 built from the 5,320 held-out Airbus tiles and the trained detector's real output
 (wplib.real_workload): real ships per tile, real lengths, real confidences, real
 misses, real false alarms, and a per-ship payload cost from the WP4 power law.
@@ -8,9 +8,9 @@ misses, real false alarms, and a per-ship payload cost from the WP4 power law.
 Still assumed, and printed on every run: tiles/day, the context mix, which ships are
 dark (no AIS in the data), and capture times (the tiles carry no timestamps).
 
-    python scripts/wp6_simulate_real.py
-    python scripts/wp6_simulate_real.py --mix dataset --tiles 80000
-    python scripts/wp6_simulate_real.py --no-size-model     # ablation: WP4 medians only
+    python legacy_wp/scripts/wp6_simulate_real.py
+    python legacy_wp/scripts/wp6_simulate_real.py --mix dataset --tiles 80000
+    python legacy_wp/scripts/wp6_simulate_real.py --no-size-model     # ablation: WP4 medians only
 
 Outputs in results/: wp6_real_table.csv, wp6_real_recall.png, wp6_real_sweep.csv/.png,
 wp6_thr_sweep.csv/.png, wp6_real_vs_sim.csv

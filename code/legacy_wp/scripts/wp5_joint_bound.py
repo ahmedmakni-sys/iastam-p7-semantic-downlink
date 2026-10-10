@@ -23,7 +23,7 @@ Two numbers come out of it:
   total gap        (bound - online) / bound      -- everything still on the table
   price of online  (clairvoyant - online) / bound -- the part caused by not seeing the future
 
-    .venv/Scripts/python.exe scripts/wp5_joint_bound.py
+    .venv/Scripts/python.exe legacy_wp/scripts/wp5_joint_bound.py
 
 Output: results/wp5_joint_bound.csv|.png
 """

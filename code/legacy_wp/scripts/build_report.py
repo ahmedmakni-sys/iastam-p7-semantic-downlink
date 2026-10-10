@@ -4,7 +4,7 @@
 
 Every number in the report is read from results/*.csv|json, so re-running the
 experiments and then this script keeps the report consistent with the code.
-Output: ../report/IASTAM_P7_Technical_Report.pdf
+Output: ../paper/IASTAM_P7_Technical_Report.pdf
 """
 from __future__ import annotations
 
