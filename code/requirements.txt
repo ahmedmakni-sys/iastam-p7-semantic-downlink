@@ -1,0 +1,12 @@
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+skyfield==1.55
+sgp4==2.27
+matplotlib==3.11.2
+pandas==3.0.6
+pytest==9.1.1
+# for detector training (Colab / Kaggle GPU recommended):
+# ultralytics
+# dashboard (code/dashboard/app.py):
+streamlit==1.65.0
+plotly==7.1.0

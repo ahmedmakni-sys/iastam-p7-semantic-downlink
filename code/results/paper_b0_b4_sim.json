@@ -1,0 +1,142 @@
+{
+  "label": "SIM",
+  "source": "synthetic",
+  "detector": "classic (fallback)",
+  "scenes": 24,
+  "scene_names": [
+    "synthetic_000",
+    "synthetic_001",
+    "synthetic_002",
+    "synthetic_003",
+    "synthetic_004",
+    "synthetic_005",
+    "synthetic_006",
+    "synthetic_007",
+    "synthetic_008",
+    "synthetic_009",
+    "synthetic_010",
+    "synthetic_011",
+    "synthetic_012",
+    "synthetic_013",
+    "synthetic_014",
+    "synthetic_015",
+    "synthetic_016",
+    "synthetic_017",
+    "synthetic_018",
+    "synthetic_019",
+    "synthetic_020",
+    "synthetic_021",
+    "synthetic_022",
+    "synthetic_023"
+  ],
+  "sahi": {
+    "tile": 512,
+    "overlap": 0.2,
+    "fusion": "nmm",
+    "match_metric": "ios",
+    "match_thr": 0.5,
+    "full_pass": false,
+    "conf_thr": 0.25
+  },
+  "powers_W_ASSUMED": {
+    "p_pre": 5.0,
+    "p_tile": 5.0,
+    "p_det": 15.0,
+    "p_fusion": 5.0,
+    "p_semantic": 5.0,
+    "p_tx": 12.0,
+    "p_isl": 25.0,
+    "p_relay_gs": 12.0
+  },
+  "det_timing": {
+    "mode": "yolo_cpu",
+    "ms_per_inference": 38.6,
+    "source": "REAL wp1_export.json onnx_fp32_cpu (laptop CPU)"
+  },
+  "relay_ASSUMED": {
+    "raan_offset_deg": 60.0,
+    "isl_max_range_km": 4500.0,
+    "isl_rate_bps": 100000000.0,
+    "isl_efficiency": 0.8,
+    "grazing_alt_km": 100.0,
+    "step_s": 20.0
+  },
+  "link": "cubesat_sband",
+  "deadline_h": 6.0,
+  "stations": [
+    "Sfax (ENIS)"
+  ],
+  "mean_downlink_Mbps": 2.5535274755612245,
+  "objective": {
+    "alpha": 1.0,
+    "beta": 1.0,
+    "gamma": 1.0,
+    "a_min": 0.5,
+    "i_min": 0.9
+  },
+  "best_operating_point": {
+    "det_thr": 0.55,
+    "config": "thr 0.55",
+    "D_tx_MB": 0.173544,
+    "DR": 0.9994253317515055,
+    "reduction_x": 1740.1344212418753,
+    "precision": 0.6512261580381471,
+    "recall": 0.9428007889546351,
+    "F1": 0.7703464947622883,
+    "mAP50": 0.6353841573130606,
+    "small_recall": 0.9433333333333334,
+    "IP": 0.963254593175853,
+    "E_proc_J": 347.53051950081715,
+    "E_comm_J": 6.266500945957625,
+    "E_total_J": 353.79702044677475,
+    "T_total_med_h": 1.1769768463163832,
+    "T_total_mean_h": 2.2417244210225213,
+    "delivered": 1.0,
+    "relay_share": 0.4166666666666667,
+    "D_tx": 173544,
+    "E_total": 353.79702044677475,
+    "T_total": 8070.207915681077,
+    "J": 0.44327960658219717
+  },
+  "example_scene": {
+    "width": 2048,
+    "height": 2048,
+    "scale": 0.5,
+    "tile": 512,
+    "overlap": 0.2,
+    "name": "synthetic_000"
+  },
+  "joint_eq20": {
+    "weights": {
+      "alpha": 1.0,
+      "beta": 1.0,
+      "gamma": 1.0
+    },
+    "constraints": {
+      "a_min": 0.9,
+      "i_min": 0.5
+    },
+    "candidate_floor": 0.1,
+    "objects": 765,
+    "J": 0.7086211453642608,
+    "J_lower_bound": 0.0,
+    "gap": Infinity,
+    "accuracy": 1.0,
+    "information": 0.5,
+    "feasible": true,
+    "valid": true,
+    "levels": {
+      "P0": 0,
+      "P1": 765,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "capture_hours": 24.0,
+  "horizon_hours": 48.0,
+  "links": {
+    "primary_passes": 9,
+    "isl_windows": 61,
+    "relay_passes": 8
+  }
+}

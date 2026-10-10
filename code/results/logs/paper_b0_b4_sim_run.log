@@ -1,0 +1,84 @@
+=== Paper B0-B4 campaign [SIM]: source=synthetic, detector=classic (fallback), tiles 512px @ 20% overlap, fusion=nmm, conf>=0.25, E_det timing=yolo_cpu ===
+links over 48 h, stations ['Sfax (ENIS)']: 9 primary windows, 61 ISL windows (1274 min), 8 relay windows; mean downlink 2.55 Mbit/s
+
+  synthetic_000: 2048x2048,  20 ships, direct  17 / SAHI  20 detections, 20 eq.20 candidates
+  synthetic_001: 2048x2048,  15 ships, direct  15 / SAHI  15 detections, 15 eq.20 candidates
+  synthetic_002: 2048x2048,  29 ships, direct  52 / SAHI  49 detections, 49 eq.20 candidates
+  synthetic_003: 2048x2048,  24 ships, direct  49 / SAHI  58 detections, 58 eq.20 candidates
+  synthetic_004: 2048x2048,  25 ships, direct  51 / SAHI  43 detections, 43 eq.20 candidates
+  synthetic_005: 2048x2048,  24 ships, direct  43 / SAHI  55 detections, 56 eq.20 candidates
+  synthetic_006: 2048x2048,  18 ships, direct  18 / SAHI  18 detections, 18 eq.20 candidates
+  synthetic_007: 2048x2048,  10 ships, direct   8 / SAHI  10 detections, 10 eq.20 candidates
+  synthetic_008: 2048x2048,  25 ships, direct  21 / SAHI  25 detections, 25 eq.20 candidates
+  synthetic_009: 2048x2048,  17 ships, direct  53 / SAHI  58 detections, 59 eq.20 candidates
+  synthetic_010: 2048x2048,  24 ships, direct  21 / SAHI  24 detections, 24 eq.20 candidates
+  synthetic_011: 2048x2048,  17 ships, direct  57 / SAHI  56 detections, 57 eq.20 candidates
+  synthetic_012: 2048x2048,  24 ships, direct  23 / SAHI  24 detections, 24 eq.20 candidates
+  synthetic_013: 2048x2048,  27 ships, direct  24 / SAHI  27 detections, 27 eq.20 candidates
+  synthetic_014: 2048x2048,  24 ships, direct  24 / SAHI  24 detections, 24 eq.20 candidates
+  synthetic_015: 2048x2048,  21 ships, direct  21 / SAHI  21 detections, 21 eq.20 candidates
+  synthetic_016: 2048x2048,  24 ships, direct  23 / SAHI  24 detections, 24 eq.20 candidates
+  synthetic_017: 2048x2048,  22 ships, direct  54 / SAHI  70 detections, 70 eq.20 candidates
+  synthetic_018: 2048x2048,  23 ships, direct  57 / SAHI  46 detections, 46 eq.20 candidates
+  synthetic_019: 2048x2048,  16 ships, direct  15 / SAHI  17 detections, 17 eq.20 candidates
+  synthetic_020: 2048x2048,  25 ships, direct  22 / SAHI  25 detections, 25 eq.20 candidates
+  synthetic_021: 2048x2048,  11 ships, direct  11 / SAHI  11 detections, 11 eq.20 candidates
+  synthetic_022: 2048x2048,  27 ships, direct  26 / SAHI  27 detections, 27 eq.20 candidates
+  synthetic_023: 2048x2048,  15 ships, direct  15 / SAHI  15 detections, 15 eq.20 candidates
+
+eq. (20) on 765 objects: J 0.7086 (lower bound 0, gap inf%), accuracy 1.000 >= 0.9, information 0.500 >= 0.5, feasible=True, valid=True
+
+=== B0 -> B4 [SIM] ===
+config  D_tx_MB  reduction_x     DR  precision  recall     F1  mAP50  small_recall     IP  E_proc_J  E_comm_J  E_total_J     ES  T_total_med_h  delivered  relay_share
+    B0      302            1      0     0.6273  0.9428 0.7533 0.6354        0.9433      1  0.001581 1.073e+04  1.073e+04      0          6.023          1            0
+    B1  0.01776      1.7e+04 0.9999     0.4722  0.6706 0.5542 0.3438        0.6333 0.5433     13.93    0.6331      14.56 0.9986          5.965          1            0
+    B2  0.01877    1.609e+04 0.9999     0.6273  0.9428 0.7533 0.6354        0.9433      1     347.5    0.6686      348.2 0.9676          5.965          1            0
+    B3   0.2274         1328 0.9992     0.6273  0.9428 0.7533 0.6354        0.9433      1     347.6     8.175      355.7 0.9669          5.966          1            0
+    B4   0.2274         1328 0.9992     0.6273  0.9428 0.7533 0.6354        0.9433      1     347.6     8.222      355.8 0.9669          1.177          1       0.4167
+  B4+J  0.01884    1.603e+04 0.9999     0.6248  0.9428 0.7516 0.6354        0.9433      1     347.5    0.6822      348.2 0.9676          1.177          1       0.4167
+  (B0 detection quality = the ground running the same SAHI detector on the raw image)
+
+=== Ablations (VIII-G) [SIM] ===
+                   config  D_tx_MB  reduction_x     DR  precision  recall     F1  mAP50  small_recall     IP  E_proc_J  E_comm_J  E_total_J     ES  T_total_med_h  delivered  relay_share
+                  B4 full   0.2274         1328 0.9992     0.6273  0.9428 0.7533 0.6354        0.9433      1     347.6     8.222      355.8 0.9669          1.177          1       0.4167
+             without SAHI   0.1116         2706 0.9996     0.4722  0.6706 0.5542 0.3438        0.6333 0.5433     13.93      4.12      18.05 0.9983          1.177          1       0.4167
+     without tile overlap   0.2305         1310 0.9992     0.6055  0.9112 0.7276 0.5886        0.9233 0.7795     222.5      8.19      230.7 0.9785          1.177          1       0.4167
+           without fusion   0.3536          854 0.9988     0.3983  0.9428   0.56  0.409        0.9433      1     347.5     12.55      360.1 0.9665          1.177          1       0.4167
+without adaptive downlink   0.9717        310.8 0.9968     0.6273  0.9428 0.7533 0.6354        0.9433      1     347.6      35.5      383.1 0.9643          1.177          1       0.4167
+ without ROI transmission  0.01877    1.609e+04 0.9999     0.6273  0.9428 0.7533 0.6354        0.9433      1     347.5      0.68      348.2 0.9676          1.177          1       0.4167
+            without relay   0.2274         1328 0.9992     0.6273  0.9428 0.7533 0.6354        0.9433      1     347.6     8.175      355.7 0.9669          5.966          1            0
+
+=== Confidence sweep on B4: eqs. (32), (34) [SIM] ===
+ det_thr  D_tx_MB  precision  recall     F1     IP  E_total_J  T_total_med_h
+     0.1   0.2348     0.6248  0.9428 0.7516      1        356          1.177
+    0.15   0.2321     0.6257  0.9428 0.7522      1      355.9          1.177
+    0.25   0.2274     0.6273  0.9428 0.7533      1      355.8          1.177
+    0.35   0.2064     0.6348  0.9428 0.7587 0.9882      355.1          1.177
+    0.45   0.1834     0.6442  0.9428 0.7654 0.9738      354.1          1.177
+    0.55   0.1735     0.6512  0.9428 0.7703 0.9633      353.8          1.177
+     0.7  0.01476     0.6118  0.7179 0.6606 0.7795        348          1.177
+
+Threshold selection under eq. (20), F1 >= 0.5, IP >= 0.9: best threshold 0.55  (J = 0.4433)
+
+=== eq. (20) solved per object (B4+J), Pareto corners; A_min 0.9, I_min 0.5 [SIM] ===
+  sweep  alpha  beta  gamma  a_min  i_min         J  J_lower_bound  gap  accuracy_eq21  information_eq22  feasible  valid  P1  P2  P3  D_tx_MB  E_total_J  T_total_med_h  recall  precision  IP
+weights      1     0      0    0.9    0.5    0.6902              0  inf              1               0.5      True   True 765   0   0  0.01884      348.2          1.177  0.9428     0.6248   1
+weights      0     1      0    0.9    0.5   0.01836              0  inf              1               0.5      True   True 765   0   0  0.01884      348.2          1.177  0.9428     0.6248   1
+weights      0     0      1    0.9    0.5 1.598e-05              0  inf              1               0.5      True   True 765   0   0  0.01884      348.2          1.177  0.9428     0.6248   1
+weights      1     1      1    0.9    0.5    0.7086              0  inf              1               0.5      True   True 765   0   0  0.01884      348.2          1.177  0.9428     0.6248   1
+weights      1    10      1    0.9    0.5    0.8739              0  inf              1               0.5      True   True 765   0   0  0.01884      348.2          1.177  0.9428     0.6248   1
+weights     10     1      1    0.9    0.5     6.921              0  inf              1               0.5      True   True 765   0   0  0.01884      348.2          1.177  0.9428     0.6248   1
+weights      1     1     10    0.9    0.5    0.7088              0  inf              1               0.5      True   True 765   0   0  0.01884      348.2          1.177  0.9428     0.6248   1
+  i_min      1     1      1    0.9    0.5    0.7086              0  inf              1               0.5      True   True 765   0   0  0.01884      348.2          1.177  0.9428     0.6248   1
+  i_min      1     1      1    0.9    0.6     9.195              0  inf              1            0.6002      True   True 527 238   0   0.2379      356.3          1.177  0.9428     0.6248   1
+  i_min      1     1      1    0.9    0.7      20.5              0  inf              1            0.7002      True   True 275 490   0   0.5298      366.7          1.177  0.9428     0.6248   1
+  i_min      1     1      1    0.9    0.8     34.97              0  inf              1            0.8003      True   True  99 554 112   0.9015      380.2          1.177  0.9428     0.6248   1
+  i_min      1     1      1    0.9    0.9     52.83              0  inf              1            0.9002      True   True  48 307 410    1.357      397.3          1.177  0.9428     0.6248   1
+  i_min      1     1      1    0.9      1     77.53              0  inf              1                 1      True   True   0   0 765    1.981      420.6          1.177  0.9428     0.6248   1
+
+ASSUMED (not measured): powers {'p_pre': 5.0, 'p_tile': 5.0, 'p_det': 15.0, 'p_fusion': 5.0, 'p_semantic': 5.0, 'p_tx': 12.0, 'p_isl': 25.0, 'p_relay_gs': 12.0}
+  link cubesat_sband, stations sfax, ISL 100 Mbps up to 4500 km, relay RAAN +60 deg, deadline 6.0 h, capture times uniform over 24.0 h
+  E_det priced on 38.60 ms/inference: REAL wp1_export.json onnx_fp32_cpu (laptop CPU)
+  SIM: synthetic scenes and/or the classic fallback detector -- not YOLO results
+
+Saved paper_b0_b4_sim.csv|.json, paper_ablations_sim.csv, paper_tradeoff_sim.csv, paper_joint_sim.csv, paper_packets_sim.csv, paper_links_sim.csv, paper_tradeoffs_sim.png in C:\Users\ahmed\OneDrive\Desktop\flask\iastam-p7-semantic-downlink\code\results
